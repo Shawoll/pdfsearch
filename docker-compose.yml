@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  pdf-search-service:
+    build:
+      context: .
+      dockerfile: ./pdf-search-service/Dockerfile
+    ports:
+      - 8080:8080
+  pdf-search-client:
+    build:
+      context: .
+      dockerfile: ./pdf-search-client/Dockerfile
+    ports:
+      - 3000:3000
